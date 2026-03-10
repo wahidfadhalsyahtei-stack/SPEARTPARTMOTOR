@@ -10,16 +10,19 @@
 <style>
 
 body{
-background-color:#1565c0;
+background:linear-gradient(180deg,#0f0f0f,#1c1c1c);
 font-family:Arial;
 text-align:center;
 color:white;
 margin:0;
 }
 
+/* HEADER */
+
 header{
-background:#0d47a1;
-padding:20px;
+background:linear-gradient(90deg,#b71c1c,#212121);
+padding:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.6);
 }
 
 .logo{
@@ -31,35 +34,70 @@ width:90px;
 margin:10px;
 }
 
+/* ANIMASI */
+
 .fade{
 opacity:0;
-animation:muncul 4s forwards;
+animation:muncul 2s forwards;
 }
 
 @keyframes muncul{
-from{opacity:0;}
-to{opacity:1;}
+from{opacity:0;transform:translateY(-20px);}
+to{opacity:1;transform:translateY(0);}
 }
 
+/* CONTAINER */
+
+.container{
+padding:20px;
+max-width:900px;
+margin:auto;
+background:#1e1e1e;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.6);
+}
+
+/* JUDUL */
+
+h2{
+color:#ff3d00;
+margin-top:30px;
+}
+
+/* TOMBOL */
+
 button{
-padding:10px 20px;
-margin:5px;
+padding:10px 18px;
+margin:6px;
 border:none;
 border-radius:8px;
-background:#ff5722;
+background:linear-gradient(45deg,#ff3d00,#ff6d00);
 color:white;
 font-weight:bold;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 3px 6px rgba(0,0,0,0.5);
 }
 
 button:hover{
-background:#ff7043;
-transform:scale(1.05);
+transform:scale(1.08);
+background:linear-gradient(45deg,#ff6d00,#ff9100);
+box-shadow:0 0 10px #ff3d00;
 }
 
-.container{
-padding:20px;
+/* GARIS */
+
+hr{
+border:0;
+height:2px;
+background:linear-gradient(90deg,transparent,#ff3d00,transparent);
+margin:25px 0;
+}
+
+footer{
+margin-top:20px;
+color:#aaa;
+font-size:14px;
 }
 
 </style>
@@ -70,10 +108,9 @@ padding:20px;
 
 <header>
 
-<!-- Logo Shopee -->
 <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg">
 
-<h1 class="fade">SELAMAT DATANG DI TOKO SPARE PART MOTOR</h1>
+<h1 class="fade">TOKO SPARE PART MOTOR</h1>
 
 </header>
 
@@ -131,7 +168,11 @@ padding:20px;
 <a href="https://shopee.co.id/power.autopart" target="_blank"><button>FIZ R</button></a>
 
 </div>
-<p>Pembuat:wahid
-<p>Tahun:2020
+
+<footer>
+<p>Pembuat: Wahid</p>
+<p>Tahun: 2020</p>
+</footer>
+
 </body>
 </html>
