@@ -5,61 +5,92 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SPARE PART MOTOR</title>
+<title>TOKO SPAREPART MOTOR</title>
 
 <style>
 
 body{
-background-color:#1565c0;
-font-family:Arial;
-text-align:center;
-color:white;
 margin:0;
+font-family:Arial;
+background:#f5f5f5;
 }
 
+/* HEADER */
+
 header{
-background:#0d47a1;
-padding:20px;
+background:#ee4d2d;
+color:white;
+padding:15px;
+text-align:center;
 }
 
 .logo{
-width:130px;
+width:120px;
 }
 
-.icon{
-width:90px;
-margin:10px;
-}
+/* SEARCH */
 
-.fade{
-opacity:0;
-animation:muncul 4s forwards;
-}
-
-@keyframes muncul{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-button{
-padding:10px 20px;
-margin:5px;
-border:none;
+.search{
+width:90%;
+max-width:400px;
+padding:10px;
 border-radius:8px;
-background:#ff5722;
-color:white;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
+border:none;
+margin-top:10px;
 }
 
-button:hover{
-background:#ff7043;
-transform:scale(1.05);
-}
+/* CONTAINER */
 
 .container{
-padding:20px;
+padding:15px;
+}
+
+/* GRID PRODUK */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+/* CARD PRODUK */
+
+.card{
+background:white;
+border-radius:12px;
+padding:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:100px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.card h3{
+font-size:14px;
+margin:8px 0;
+}
+
+.btn{
+display:inline-block;
+background:#ee4d2d;
+color:white;
+padding:8px 12px;
+border-radius:8px;
+text-decoration:none;
+font-size:13px;
+}
+
+.btn:hover{
+background:#ff6a4d;
+}
+
+h2{
+margin-top:25px;
 }
 
 </style>
@@ -70,68 +101,111 @@ padding:20px;
 
 <header>
 
-<!-- Logo Shopee -->
 <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg">
 
-<h1 class="fade">SELAMAT DATANG DI TOKO SPARE PART MOTOR</h1>
+<h2>TOKO SPAREPART MOTOR</h2>
+
+<input class="search" id="search" placeholder="Cari motor..." onkeyup="cariMotor()">
 
 </header>
 
 <div class="container">
 
-<p>Jual Sparepart dan Aksesoris Motor</p>
-<p>Rekomendasi Produk Shopee</p>
-
-<hr>
-
 <h2>Motor Matic</h2>
 
-<img class="icon" src="https://cdn-icons-png.flaticon.com/512/743/743131.png">
+<div class="grid" id="produk">
 
-<p>
+<div class="card">
+<img src="https://i.imgur.com/YK9FZ7D.png">
+<h3>Honda Vario</h3>
+<a class="btn" href="https://s.shopee.co.id/7pYk2tgG1u" target="_blank">Lihat Produk</a>
+</div>
 
-<a href="https://s.shopee.co.id/7pYk2tgG1u" target="_blank"><button>VARIO</button></a>
-<a href="https://s.shopee.co.id/1LLGPB7T72" target="_blank"><button>PCX</button></a>
-<a href="https://s.shopee.co.id/7zsAUY06bK" target="_blank"><button>NMAX</button></a>
-<a href="https://s.shopee.co.id/9A47tCIPN0" target="_blank"><button>LEXI</button></a>
-<a href="https://s.shopee.co.id/4AfRwNjkcL" target="_blank"><button>SCOOPY</button></a>
-<a href="https://s.shopee.co.id/1qHXA0UBcG" target="_blank"><button>MIO</button></a>
-<a href="https://s.shopee.co.id/qOzy78wbv" target="_blank"><button>BEAT</button></a>
-<a href="https://s.shopee.co.id/8f7rIQCLSf" target="_blank"><button>AEROX</button></a>
+<div class="card">
+<img src="https://i.imgur.com/Q6bG4Tf.png">
+<h3>Honda PCX</h3>
+<a class="btn" href="https://s.shopee.co.id/1LLGPB7T72" target="_blank">Lihat Produk</a>
+</div>
 
-<hr>
+<div class="card">
+<img src="https://i.imgur.com/X2F7B7L.png">
+<h3>Yamaha NMAX</h3>
+<a class="btn" href="https://s.shopee.co.id/7zsAUY06bK" target="_blank">Lihat Produk</a>
+</div>
+
+<div class="card">
+<img src="https://i.imgur.com/W5yYqW6.png">
+<h3>Yamaha Aerox</h3>
+<a class="btn" href="https://s.shopee.co.id/8f7rIQCLSf" target="_blank">Lihat Produk</a>
+</div>
+
+</div>
+
 
 <h2>Motor Sport</h2>
 
-<img class="icon" src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png">
+<div class="grid">
 
-<p>
+<div class="card">
+<img src="https://i.imgur.com/0gKXG0T.png">
+<h3>Yamaha Vixion</h3>
+<a class="btn" href="https://s.shopee.co.id/2VXG4Mz51z" target="_blank">Lihat Produk</a>
+</div>
 
-<a href="https://s.shopee.co.id/3VPlN9A2gr" target="_blank"><button>SATRIA</button></a>
-<a href="https://s.shopee.co.id/2VXG4Mz51z" target="_blank"><button>VIXION</button></a>
-<a href="https://s.shopee.co.id/5AXzOwjHma" target="_blank"><button>CBR</button></a>
-<a href="https://s.shopee.co.id/2fqf04I8s7" target="_blank"><button>NINJA</button></a>
-<a href="https://s.shopee.co.id/qP25nSMo0" target="_blank"><button>CB</button></a>
-<a href="https://s.shopee.co.id/8pRILoAxvS" target="_blank"><button>KLX</button></a>
-<a href="https://s.shopee.co.id/8pRILoAxvS" target="_blank"><button>CRF</button></a>
-<a href="https://s.shopee.co.id/1B1sUqtrE7" target="_blank"><button>R15</button></a>
-<a href="https://s.shopee.co.id/g5buIUs5Z" target="_blank"><button>SONIC</button></a>
-<a href="https://s.shopee.co.id/4AfU5czBjP" target="_blank"><button>GSX</button></a>
-<a href="https://s.shopee.co.id/7AJ5fFTPSq" target="_blank"><button>MEGAPRO</button></a>
-<a href="https://s.shopee.co.id/1LLIiryjUb" target="_blank"><button>VERZA</button></a>
-<a href="https://s.shopee.co.id/g5bvxg3rU" target="_blank"><button>SUPRA GTR</button></a>
-<a href="https://s.shopee.co.id/8ABcrssH7F" target="_blank"><button>MX KING</button></a>
+<div class="card">
+<img src="https://i.imgur.com/Z6rA6sS.png">
+<h3>Kawasaki Ninja</h3>
+<a class="btn" href="https://s.shopee.co.id/2fqf04I8s7" target="_blank">Lihat Produk</a>
+</div>
 
-<hr>
+<div class="card">
+<img src="https://i.imgur.com/4OQ8g5O.png">
+<h3>Honda CBR</h3>
+<a class="btn" href="https://s.shopee.co.id/5AXzOwjHma" target="_blank">Lihat Produk</a>
+</div>
+
+</div>
+
 
 <h2>Motor 2 Tak</h2>
 
-<a href="https://s.shopee.co.id/5AY1XAy7Ko" target="_blank"><button>NINJA RR</button></a>
-<a href="https://shopee.co.id/gathhokopianget" target="_blank"><button>RX KING</button></a>
-<a href="https://shopee.co.id/power.autopart" target="_blank"><button>FIZ R</button></a>
+<div class="grid">
+
+<div class="card">
+<img src="https://i.imgur.com/6y0pXnC.png">
+<h3>Ninja RR</h3>
+<a class="btn" href="https://s.shopee.co.id/5AY1XAy7Ko" target="_blank">Lihat Produk</a>
+</div>
+
+<div class="card">
+<img src="https://i.imgur.com/h7mC4lG.png">
+<h3>RX King</h3>
+<a class="btn" href="https://shopee.co.id/gathhokopianget" target="_blank">Lihat Produk</a>
+</div>
 
 </div>
-<p>Pembuat:wahid
-<p>Tahun:2020
+
+</div>
+
+<script>
+
+function cariMotor(){
+let input=document.getElementById("search").value.toLowerCase();
+let card=document.getElementsByClassName("card");
+
+for(let i=0;i<card.length;i++){
+let text=card[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+card[i].style.display="";
+}else{
+card[i].style.display="none";
+}
+}
+
+}
+
+</script>
+
 </body>
 </html>
